@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <style>
+        .countain{
+            background-color: rgba(250, 235, 215, 0.966);
+            border-radius: 25px;
+            color: rgb(129, 7, 7);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            align-items:center;
+
+        }
+        .sit{
+            background-color: rgba(136, 25, 25, 0.966);
+            color: rgb(8, 8, 8);
+
+        }
+    </style>
+    <title> Heart-failure-prediction</title>
+    <div class="sit">
+    <h1>
+        <center>Heart-failure-prediction</center>
+    </h1>
+    <div class="countain">
+        <center>
+            <h3 id="result">
+                <span> </span>
+            </h3>
+            <form method="POST", action="{{url_for('predict')}}">
+        Age: <input type="number" name='1'><br><br>
+        Sex:
+        <select class="sex" name='2'>
+            <option value = 1>Male</option>
+            <option value = 0>Female</option>
+            </select>
+            <br><br>
+        ChestPainType:
+        <select class="chestPainType" name='3'>
+            <option value=1>ATA</option>
+            <option value=2>NAP</option>
+            <option value=3>ASY</option>
+            <option value=4>TA</option>
+            </select>
+            <br><br>
+         RestingBP:<input type="number" name='4'><br><br>
+         Cholesterol:<input type="number" name='5'><br><br>
+         FastingBS: <select class="fast" name='6'>
+             <option value=1>Yes</option>
+             <option value=0>No</option>
+         </select>
+         <br><br>
+         RestingECG:<select class="fast" name='7'>
+             <option value=0>Normal</option>
+             <option value=1>ST</option>
+             <option value=1>LVH</option>
+         </select>
+         <br><br>
+         MaxHR:<input type="number" name='8'><br><br>
+         ExerciseAngina:<select class="exer" name='9'>
+             <option value=1>Yes</option>
+             <option value=0>No</option>
+         </select>
+         <br><br>
+         Oldpeak:<input type="number" name='10'>
+         <br><br>
+         ST_Slope:<select class="slope" name='11'>
+             <option value=1>Up</option>
+             <option value=0>Normal</option>
+             <option value=-1>Down</option>
+         </select>
+         <br><br>
+         <button type="submit" value="predict">Submit</button>
+        </center>
+        </form>
+    </div>
+    </div>
+</html>
