@@ -7,10 +7,12 @@
     <title>result</title>
     <center>
     <h4>Prediction:</h4>
-    {%if data == 0%}
+    {% if data == 0 %}
     <h5>Not heart failure</h5>
-    {%else %}
+    {% endif %}
+    {% if data == 1 %}
     <h5>Heart failure</h5>
+    {% endif %}
     </center>
 
 </html>
